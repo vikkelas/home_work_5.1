@@ -4,7 +4,6 @@ import Magician from "../Magician.js";
 import Zombie from "../Zombie.js";
 import Undead from "../Undead.js";
 import Swordsman from "../Swordsman.js";
-import Character from "../Character.js";
 
 test.each([
   [
@@ -76,12 +75,4 @@ test.each([
 ])("check hero", (hero, heroModule) => {
   const result = heroModule;
   expect(result).toEqual(hero);
-});
-
-test("check error name", () => {
-  expect(() => new Character("D")).toThrowError();
-});
-
-test("check error type", () => {
-  expect(() => new Character("Dan")).toThrowError();
 });
